@@ -12,12 +12,11 @@ def write_file(filename="", text=""):
     Counts the number of lines from the filename
 
     Arguments:
-        filename (str): The name of the file to count in
-    """
-    with open(filename, "w+") as file:
-        file.write("")
-        file.close()
+        filename (str): The name of the file to open
+        text (str): The text to write in
 
-    with open(filename, encoding='utf-8') as file:
-        lines = file.readlines()
-    return len(lines)
+        Return:
+            A file with text written
+    """
+    with open(filename, 'w', encoding='utf-8') as file:
+        return file.write(text)
